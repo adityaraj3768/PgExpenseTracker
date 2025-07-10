@@ -17,7 +17,7 @@ jobs:
     env:
       DATASOURCE_USERNAME: adityaraj3768
       DATASOURCE_PASSWORD: 207709Raj@
-      DATASOURCE_URL: jdbc:mysql://pg-expense-db.mysql.database.azure.com:3306/<expense>?useSSL=true
+      DATASOURCE_URL: jdbc:mysql://pg-expense-db.mysql.database.azure.com:3306/expense?useSSL=true
 
     steps:
       - uses: actions/checkout@v4
