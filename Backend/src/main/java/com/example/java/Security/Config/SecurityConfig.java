@@ -31,8 +31,8 @@ public class SecurityConfig {
     private CustomUserDetailsService userDetailsService;
 
     // Inject frontend origin from application.properties
-    @Value("${frontend.origin}")
-    private String frontendOrigin;
+    // @Value("${frontend.origin}")
+    // private String frontendOrigin;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -70,7 +70,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of(frontendOrigin)); // React origin
+        configuration.setAllowedOrigins(List.of()); // React origin
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")); // Allowed HTTP methods
         configuration.setAllowedHeaders(List.of("Authorization", "Content-Type")); // Required for token requests
         configuration.setAllowCredentials(true); // Must be true for cookies/token headers
