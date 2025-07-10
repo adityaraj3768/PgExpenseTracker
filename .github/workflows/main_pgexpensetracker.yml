@@ -15,9 +15,9 @@ jobs:
     permissions:
       contents: read
     env:
-      DATASOURCE_USERNAME: ${{ secrets.DATASOURCE_USERNAME }}
-      DATASOURCE_PASSWORD: ${{ secrets.DATASOURCE_PASSWORD }}
-      DATASOURCE_URL: ${{ secrets.DATASOURCE_URL }}
+      DATASOURCE_USERNAME: adityaraj3768
+      DATASOURCE_PASSWORD: 207709Raj@
+      DATASOURCE_URL: pg-expense-db.mysql.database.azure.com
 
     steps:
       - uses: actions/checkout@v4
