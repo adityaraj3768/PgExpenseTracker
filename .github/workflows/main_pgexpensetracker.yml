@@ -13,7 +13,11 @@ jobs:
   build:
     runs-on: windows-latest
     permissions:
-      contents: read #This is required for actions/checkout
+      contents: read
+    env:
+      DATASOURCE_USERNAME: ${{ secrets.DATASOURCE_USERNAME }}
+      DATASOURCE_PASSWORD: ${{ secrets.DATASOURCE_PASSWORD }}
+      DATASOURCE_URL: ${{ secrets.DATASOURCE_URL }}
 
     steps:
       - uses: actions/checkout@v4
