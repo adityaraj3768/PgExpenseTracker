@@ -31,7 +31,7 @@ public class SecurityConfig {
     private CustomUserDetailsService userDetailsService;
 
     // Inject frontend origin from application.properties
-    @Value("${frontend_origin}")
+    @Value("${FRONTEND_ORIGIN}")
     private String frontendOrigin;
 
     @Bean
