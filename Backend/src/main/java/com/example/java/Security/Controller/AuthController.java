@@ -9,6 +9,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,6 +25,11 @@ import com.example.java.Security.JWT.JwtUtil;
 
 @RestController
 @RequestMapping("/auth")
+@CrossOrigin(origins = {
+    "https://lemon-desert-0b879aa10.1.azurestaticapps.net",
+    "http://localhost:3000",
+    "http://localhost:5173"
+}, allowCredentials = "true")
 public class AuthController {
 
      @Autowired
