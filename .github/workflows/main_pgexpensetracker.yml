@@ -18,7 +18,7 @@ jobs:
       DATASOURCE_USERNAME: ${{secrets.DATASOURCE_USERNAME}}
       DATASOURCE_PASSWORD: ${{secrets.DATASOURCE_PASSWORD}}
       DATASOURCE_URL: ${{secrets.DATASOURCE_URL}}
-      frontend_origin: ${{secrets.frontend_origin}}
+      FRONTEND_ORIGIN: ${{secrets.FRONTEND_ORIGIN}}
 
     steps:
       - uses: actions/checkout@v4
