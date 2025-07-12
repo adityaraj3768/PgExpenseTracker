@@ -36,7 +36,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: expensetracker
-          path: 'Backend/target/*.jar'
+          path: '*Backend/target/*.jar'
 
   deploy:
     runs-on: windows-latest
@@ -65,5 +65,5 @@ jobs:
         with:
           app-name: 'pgexpensetracker'
           slot-name: 'Production'
-          package: '*Backend/target/*.jar'
+          package: '*.jar'
           
